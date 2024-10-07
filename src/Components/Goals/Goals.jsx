@@ -43,7 +43,7 @@ const Goals = ({ goals }) => {
       >
         <LazyLoadImage
           effect="blue"
-          src="/public/images/goal.jpg"
+          src="/images/goal.jpg"
           alt=""
           className="w-full h-full  rounded-full outline-dashed outline-primary p-5"
           width="100%"

@@ -43,7 +43,7 @@ const WhoWeAre = () => {
         <LazyLoadImage
           effect="blur"
           loading="lazy"
-          src="/public/images/who.jpg"
+          src="/images/who.jpg"
           alt=""
           placeholderSrc={<BounceLoader color="#1ABA9E" />}
           className="rounded-[50%] lg:w-[600px] h-[400px] md:w-[550px]  lg:h-[550px] outline-dashed outline-primary p-5 object-cover"

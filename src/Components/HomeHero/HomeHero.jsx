@@ -95,7 +95,7 @@ const HomeHero = () => {
             </motion.h2>
           </div>
           <motion.img
-            src="/public/images/icons8-down-arrow-100.png"
+            src="/images/icons8-down-arrow-100.png"
             alt=""
             variants={textVariants}
             animate="scrollButton"
@@ -109,7 +109,7 @@ const HomeHero = () => {
         >
           <LazyLoadImage
             effect="blur"
-            src="/public/images/Icon Logo.png"
+            src="/images/Icon Logo.png"
             alt=""
             className="w-full  h-full"
             variants={imageVariants}

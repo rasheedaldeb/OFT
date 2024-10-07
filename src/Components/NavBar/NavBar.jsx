@@ -24,7 +24,7 @@ const NavBar = ({ menu }) => {
       <nav className="flex items-center flex-col gap-7 pt-5 lg:p-[20px_50px]   z-10">
         <div className="logo w-[90px] md:w-[150px]">
           <motion.img
-            src="/public/images/OFT ENG.png"
+            src="/images/OFT ENG.png"
             alt=""
             className="w-full"
             initial={{ y: -200, scale: 0.5 }}

@@ -61,7 +61,7 @@ const Footer = ({ footerMenu, footerMenu2 }) => {
             whileInView="animate"
           >
             <LazyLoadImage
-              src="/public/images/OFT ENG.png"
+              src="/images/OFT ENG.png"
               effect="blur"
               loading="lazy"
               className="lg:w-[200px] w-[150px]"
@@ -97,11 +97,7 @@ const Footer = ({ footerMenu, footerMenu2 }) => {
             variants={textVariants}
           >
             Find Us On S{" "}
-            <img
-              src="/public/images/Icon Logo.png"
-              alt=""
-              className="w-[25px]"
-            />
+            <img src="/images/Icon Logo.png" alt="" className="w-[25px]" />
             cial <span className="text-gray-500"> Media</span>
           </motion.h1>
           <div className="social flex gap-5">
@@ -110,7 +106,7 @@ const Footer = ({ footerMenu, footerMenu2 }) => {
               target="blank"
             >
               <img
-                src="/public/images/icons8-facebook (1).svg"
+                src="/images/icons8-facebook (1).svg"
                 alt=""
                 className="w-[35px]"
               />
@@ -120,7 +116,7 @@ const Footer = ({ footerMenu, footerMenu2 }) => {
               target="blank"
             >
               <img
-                src="/public/images/icons8-instagram.svg"
+                src="/images/icons8-instagram.svg"
                 alt=""
                 className="w-[35px]"
               />
@@ -130,7 +126,7 @@ const Footer = ({ footerMenu, footerMenu2 }) => {
               target="blank"
             >
               <img
-                src="/public/images/icons8-twitterx.svg"
+                src="/images/icons8-twitterx.svg"
                 alt=""
                 className="w-[35px]"
               />

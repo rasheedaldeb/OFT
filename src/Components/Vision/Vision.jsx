@@ -62,7 +62,7 @@ const Vision = () => {
           <LazyLoadImage
             loading="lazy"
             effect="blur"
-            src="/public/images/vision.jpg"
+            src="/images/vision.jpg"
             alt=""
             placeholderSrc={<BounceLoader color="#1ABA9E" />}
             className="lg:w-[500px] lg:h-[300px] md:w-[500px] md:h-[500px] w-[300px] h-[300px]  rounded-full outline-dashed outline-primary p-2"

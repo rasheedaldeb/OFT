@@ -116,7 +116,7 @@ const Values = () => {
           <LazyLoadImage
             effect="blur"
             loading="lazy"
-            src="/public/images/values.jpg"
+            src="/images/values.jpg"
             alt=""
             placeholderSrc={<BounceLoader color="#1ABA9E" />}
             className="w-[350px] h-[350px] rounded-full outline-dashed outline-Secondary p-2"
