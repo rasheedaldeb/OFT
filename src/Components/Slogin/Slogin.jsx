@@ -23,7 +23,12 @@ const Slogin = () => {
         whileInView="animate"
       >
         TURNING IDEAS INT
-        <img src="/images/Icon Logo.png" alt="" className="w-[40px]" />
+        <img
+          src="/images/Icon Logo.png"
+          alt=""
+          className="w-[40px]"
+          loading="lazy"
+        />
         <span className="text-gray-500">REALITY</span>
       </motion.p>
     </section>

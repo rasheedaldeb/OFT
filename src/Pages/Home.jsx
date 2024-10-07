@@ -8,10 +8,11 @@ import WhoWeAre from "../Components/WhoWeAre/WhoWeAre";
 const Home = () => {
   return (
     <div>
-      <HomeHero />
-      <WhoWeAre />
-      <Vision />
+      <HomeHero mainImg="/images/Icon Logo.png" />
+      <WhoWeAre mainImg="/images/who.jpg" />
+      <Vision mainImg="/images/vision.jpg" />
       <Goals
+        mainImg="/images/goal.jpg"
         goals={[
           {
             icon: "/images/business-proposal (2).png",
@@ -35,7 +36,7 @@ const Home = () => {
           },
         ]}
       />
-      <Values />
+      <Values mainImg="/images/values.jpg" />
       <Slogin />
     </div>
   );

@@ -1,8 +1,8 @@
 import "./HomeHero.scss";
 import { motion } from "framer-motion";
-import { LazyLoadImage } from "react-lazy-load-image-component";
+import { useEffect, useState } from "react";
 import "react-lazy-load-image-component/src/effects/blur.css";
-import { BounceLoader } from "react-spinners";
+import { Blurhash } from "react-blurhash";
 const sliderVariants = {
   initial: {
     x: 0,
@@ -52,7 +52,16 @@ const imageVariants = {
     },
   },
 };
-const HomeHero = () => {
+const HomeHero = ({ mainImg }) => {
+  const [imgLoaded, setImgLoaded] = useState(false);
+
+  useEffect(() => {
+    const img = new Image();
+    img.onload = () => {
+      setImgLoaded(true);
+    };
+    img.src = mainImg;
+  }, [mainImg]);
   return (
     <div className="hero p-[50px_20px_25px] md:p-[50px_60px_40px]">
       <motion.div
@@ -107,15 +116,26 @@ const HomeHero = () => {
           initial="initial"
           whileInView="animate"
         >
-          <LazyLoadImage
-            effect="blur"
-            src="/images/Icon Logo.png"
-            alt=""
-            className="w-full  h-full"
-            variants={imageVariants}
-            loading="lazy"
-            placeholderSrc={<BounceLoader color="#1ABA9E" />}
-          />
+          {true && (
+            <Blurhash
+              hash="LOAp8RiKL1xtD0o|nhR*pbgMm-R*"
+              width="100%"
+              height="100%"
+              resolutionX={32}
+              resolutionY={32}
+              punch={2}
+            />
+          )}
+          {imgLoaded && (
+            <img
+              src={mainImg}
+              alt=""
+              className="w-full  h-full"
+              loading="lazy"
+              width="100%"
+              height="100%"
+            />
+          )}
         </motion.div>
       </div>
     </div>

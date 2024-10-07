@@ -1,9 +1,9 @@
 /* eslint-disable react/prop-types */
 import SectionHeading from "../SectionHeading";
 import { motion } from "framer-motion";
-import { LazyLoadImage } from "react-lazy-load-image-component";
-import "react-lazy-load-image-component/src/effects/blur.css";
-import { BounceLoader } from "react-spinners";
+import { useState, useEffect } from "react";
+import { Blurhash } from "react-blurhash";
+import "./Goals.scss";
 const textVariants = {
   initial: {
     x: 200,
@@ -32,7 +32,16 @@ const imageVariants = {
     },
   },
 };
-const Goals = ({ goals }) => {
+const Goals = ({ goals, mainImg }) => {
+  const [imgLoaded, setImgLoaded] = useState(false);
+
+  useEffect(() => {
+    const img = new Image();
+    img.onload = () => {
+      setImgLoaded(true);
+    };
+    img.src = mainImg;
+  }, [mainImg]);
   return (
     <div className="flex flex-col-reverse lg:flex-row items-center gap-6 justify-between p-[50px_25px] lg:p-[70px_60px] overflow-hidden">
       <motion.div
@@ -41,15 +50,27 @@ const Goals = ({ goals }) => {
         initial="initial"
         whileInView="animate"
       >
-        <LazyLoadImage
-          effect="blue"
-          src="/images/goal.jpg"
-          alt=""
-          className="w-full h-full  rounded-full outline-dashed outline-primary p-5"
-          width="100%"
-          height="100%"
-          placeholderSrc={<BounceLoader color="#1ABA9E" />}
-        />
+        {!imgLoaded && (
+          <Blurhash
+            hash="L7JR8W00K-K,00AL$^9D*I0K$k?H"
+            width="100%"
+            height="100%"
+            resolutionX={32}
+            resolutionY={32}
+            punch={2}
+            className=" outline-dashed outline-primary "
+          />
+        )}
+        {imgLoaded && (
+          <img
+            src={mainImg}
+            alt=""
+            loading="lazy"
+            className="w-full h-full  rounded-full outline-dashed outline-primary p-5"
+            width="100%"
+            height="100%"
+          />
+        )}
       </motion.div>
       <div className="right lg:w-[47%] w-full">
         <SectionHeading title="Our" title2="Goals" />
@@ -66,8 +87,7 @@ const Goals = ({ goals }) => {
               key={i}
             >
               <div className=" content md:text-xl text-lg flex flex-col md:flex-row  items-center gap-3 h-full text-Secondary transition-all">
-                <LazyLoadImage
-                  effect="blur"
+                <img
                   loading="lazy"
                   src={item.icon}
                   alt=""

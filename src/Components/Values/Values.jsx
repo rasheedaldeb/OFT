@@ -1,8 +1,9 @@
+import { useEffect, useState } from "react";
 import SectionHeading from "../SectionHeading";
 import { motion } from "framer-motion";
-import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
-import { BounceLoader } from "react-spinners";
+import { Blurhash } from "react-blurhash";
+import "../Goals/Goals.scss";
 const textVariants = {
   initial: {
     x: -200,
@@ -31,7 +32,16 @@ const imageVariants = {
     },
   },
 };
-const Values = () => {
+const Values = ({ mainImg }) => {
+  const [imgLoaded, setImgLoaded] = useState(false);
+
+  useEffect(() => {
+    const img = new Image();
+    img.onload = () => {
+      setImgLoaded(true);
+    };
+    img.src = mainImg;
+  }, [mainImg]);
   return (
     <section className="flex flex-col items-center gap-7 ">
       <SectionHeading title="Our" title2="Values" />
@@ -112,13 +122,23 @@ const Values = () => {
           variants={imageVariants}
           initial="initial"
           whileInView="animate"
+          className="img"
         >
-          <LazyLoadImage
-            effect="blur"
+          {!imgLoaded && (
+            <Blurhash
+              hash="L27on;aK8wD5%iRPozt700t9.S.S"
+              width="350px"
+              height="350px"
+              resolutionX={32}
+              resolutionY={32}
+              punch={2}
+              className=" outline-dashed outline-Secondary "
+            />
+          )}
+          <img
             loading="lazy"
-            src="/images/values.jpg"
+            src={mainImg}
             alt=""
-            placeholderSrc={<BounceLoader color="#1ABA9E" />}
             className="w-[350px] h-[350px] rounded-full outline-dashed outline-Secondary p-2"
           />
         </motion.div>

@@ -1,8 +1,10 @@
+/* eslint-disable react/prop-types */
 import { motion } from "framer-motion";
 import SectionHeading from "../SectionHeading";
-import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
-import { BounceLoader } from "react-spinners";
+import { Blurhash } from "react-blurhash";
+import "../Goals/Goals.scss";
+import { useEffect, useState } from "react";
 //animation variants//
 const textVariants = {
   initial: {
@@ -32,7 +34,15 @@ const imageVariants = {
     },
   },
 };
-const Vision = () => {
+const Vision = ({ mainImg }) => {
+  const [imgLoaded, setImgLoaded] = useState(false);
+  useEffect(() => {
+    const img = new Image();
+    img.onload = () => {
+      setImgLoaded(true);
+    };
+    img.src = mainImg;
+  }, [mainImg]);
   return (
     <section
       className=" overflow-hidden border-t-[20px] border-primary items-center
@@ -58,14 +68,20 @@ const Vision = () => {
           variants={imageVariants}
           initial="initial"
           whileInView="animate"
+          className=" img lg:w-[400px] lg:h-[400px] md:w-[500px] md:h-[500px] w-[300px] h-[300px]"
         >
-          <LazyLoadImage
+          {!imgLoaded && (
+            <Blurhash
+              hash="LtHL6p~p-;t7WARjaxoLxZs,WBR*"
+              width="100%"
+              height="100%"
+            />
+          )}
+          <img
             loading="lazy"
-            effect="blur"
-            src="/images/vision.jpg"
+            src={mainImg}
             alt=""
-            placeholderSrc={<BounceLoader color="#1ABA9E" />}
-            className="lg:w-[500px] lg:h-[300px] md:w-[500px] md:h-[500px] w-[300px] h-[300px]  rounded-full outline-dashed outline-primary p-2"
+            className=" h-full w-full rounded-full outline-dashed outline-primary p-2"
           />
         </motion.div>
       </div>
