@@ -63,7 +63,7 @@ const HomeHero = ({ mainImg }) => {
     img.src = mainImg;
   }, [mainImg]);
   return (
-    <div className="hero p-[50px_20px_25px] md:p-[50px_60px_40px]">
+    <div className="hero p-[50px_20px_15px] md:p-[50px_60px_40px]">
       <motion.div
         className="slidingTextContainer text-primary"
         variants={sliderVariants}
@@ -74,20 +74,20 @@ const HomeHero = ({ mainImg }) => {
       </motion.div>
       <div className="hero-content w-full flex justify-between  flex-col gap-5 lg:flex-row">
         <motion.div
-          className="info w-full lg:w-1/2 flex flex-col items-center"
+          className="info w-full lg:w-[45%] flex flex-col items-center"
           variants={textVariants}
           initial="initial"
           whileInView="animate"
         >
           <div>
             <motion.h4
-              className="text-4xl font-bold text-gray-500"
+              className="md:text-4xl text-3xl font-bold text-gray-500"
               variants={textVariants}
             >
               We are <span className="text-primary">OFT</span>
             </motion.h4>
             <motion.h1
-              className="text-[40px] md:text-[70px] font-bold text-primary"
+              className="text-[30px] md:text-[70px] font-bold text-primary"
               variants={textVariants}
             >
               Financial,Advisory, <br />
@@ -111,12 +111,12 @@ const HomeHero = ({ mainImg }) => {
           />
         </motion.div>
         <motion.div
-          className="img w-full lg:w-1/2 flex items-center justify-center"
+          className="img w-full lg:w-[45%] flex items-center justify-center"
           variants={imageVariants}
           initial="initial"
           whileInView="animate"
         >
-          {true && (
+          {!imgLoaded && (
             <Blurhash
               hash="LOAp8RiKL1xtD0o|nhR*pbgMm-R*"
               width="100%"

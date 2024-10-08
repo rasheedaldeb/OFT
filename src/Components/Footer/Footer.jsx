@@ -34,7 +34,7 @@ const imageVariants = {
 };
 const Footer = ({ footerMenu, footerMenu2 }) => {
   return (
-    <footer className="border-t-8 border-primary mt-5 p-[50px_25px] lg:p-[70px_60px] ">
+    <footer className="border-t-8 border-primary mt-5 p-[50px_15px] lg:p-[70px_60px] ">
       <div className="flex justify-between items-center pb-10 flex-col lg:flex-row">
         <div className=" flex flex-col md:flex-row  items-center gap-5 lg:border-r-2  border-primary lg:pr-5">
           <motion.ul
@@ -135,7 +135,7 @@ const Footer = ({ footerMenu, footerMenu2 }) => {
         </motion.div>
       </div>
       <p className="flex items-center justify-center pt-14 md:text-3xl text-sm text-primary border-t-2 border-primary">
-        &copy;2024 Own Financial Tactics| All Rights Reserved
+        &copy;2024 Own Financial Tactics | All Rights Reserved
       </p>
     </footer>
   );

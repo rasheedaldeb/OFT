@@ -43,9 +43,9 @@ const Goals = ({ goals, mainImg }) => {
     img.src = mainImg;
   }, [mainImg]);
   return (
-    <div className="flex flex-col-reverse lg:flex-row items-center gap-6 justify-between p-[50px_25px] lg:p-[70px_60px] overflow-hidden">
+    <div className="flex flex-col-reverse lg:flex-row items-center gap-6 justify-between p-[50px_15px] lg:p-[70px_60px] overflow-hidden">
       <motion.div
-        className="img lg:w-[550px]  lg:h-[550px] w-[360px] h-[350px] "
+        className="img lg:w-[550px]  lg:h-[550px] w-[275px] h-[275px] "
         variants={imageVariants}
         initial="initial"
         whileInView="animate"
@@ -66,7 +66,7 @@ const Goals = ({ goals, mainImg }) => {
             src={mainImg}
             alt=""
             loading="lazy"
-            className="w-full h-full  rounded-full outline-dashed outline-primary p-5"
+            className="w-full h-full  rounded-full outline-dashed outline-primary md:p-5 p-3"
             width="100%"
             height="100%"
           />

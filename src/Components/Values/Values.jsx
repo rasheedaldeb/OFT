@@ -46,7 +46,7 @@ const Values = ({ mainImg }) => {
     <section className="flex flex-col items-center gap-7 ">
       <SectionHeading title="Our" title2="Values" />
       <div
-        className=" p-[30px_20px_25px] md:p-[30px_60px_40px] overflow-hidden
+        className=" p-[30px_20px_15px] md:p-[30px_60px_40px] overflow-hidden
       values-section w-full flex flex-col lg:flex-row  justify-between items-center bg-primary"
       >
         <motion.div
@@ -60,10 +60,10 @@ const Values = ({ mainImg }) => {
             variants={textVariants}
           >
             <motion.div className="value" variants={textVariants}>
-              <p className="text-5xl text-Secondary flex items-center">
+              <p className="md:text-5xl text-3xl text-Secondary flex items-center">
                 <span
                   className=" flex items-center justify-center
-                bg-Secondary w-[75px] h-[75px]  rounded-full text-white"
+                bg-Secondary md:w-[75px] md:h-[75px] w-[50px] h-[50px]  rounded-full text-white"
                 >
                   Pr
                 </span>
@@ -71,10 +71,10 @@ const Values = ({ mainImg }) => {
               </p>
             </motion.div>
             <motion.div className="value" variants={textVariants}>
-              <p className="text-5xl text-Secondary flex items-center">
+              <p className="md:text-5xl text-3xl text-Secondary flex items-center">
                 <span
                   className=" flex items-center justify-center
-                bg-Secondary w-[75px] h-[75px]  rounded-full text-white"
+                bg-Secondary md:w-[75px] md:h-[75px] w-[50px] h-[50px]  rounded-full text-white"
                 >
                   Pr
                 </span>
@@ -82,10 +82,10 @@ const Values = ({ mainImg }) => {
               </p>
             </motion.div>
             <div className="value">
-              <p className="text-5xl text-Secondary flex items-center">
+              <p className="md:text-5xl text-3xl text-Secondary flex items-center">
                 <span
                   className=" flex items-center justify-center
-                bg-Secondary w-[75px] h-[75px]  rounded-full text-white"
+                bg-Secondary md:w-[75px] md:h-[75px] w-[50px] h-[50px]  rounded-full text-white"
                 >
                   De
                 </span>
@@ -95,10 +95,10 @@ const Values = ({ mainImg }) => {
           </motion.div>
           <div className="second flex flex-col justify-center gap-12">
             <div className="value">
-              <p className="text-5xl text-Secondary flex items-center">
+              <p className="md:text-5xl text-3xl text-Secondary flex items-center">
                 <span
                   className=" flex items-center justify-center
-                bg-Secondary w-[75px] h-[75px]  rounded-full text-white"
+                bg-Secondary md:w-[75px] md:h-[75px] w-[50px] h-[50px]  rounded-full text-white"
                 >
                   Pa
                 </span>
@@ -106,10 +106,10 @@ const Values = ({ mainImg }) => {
               </p>
             </div>
             <div className="value">
-              <p className="text-5xl text-Secondary flex items-center">
+              <p className="md:text-5xl text-3xl text-Secondary flex items-center">
                 <span
                   className=" flex items-center justify-center
-                bg-Secondary w-[75px] h-[75px]  rounded-full text-white"
+                bg-Secondary md:w-[75px] md:h-[75px] w-[50px] h-[50px]  rounded-full text-white"
                 >
                   Co
                 </span>
@@ -122,13 +122,13 @@ const Values = ({ mainImg }) => {
           variants={imageVariants}
           initial="initial"
           whileInView="animate"
-          className="img"
+          className="img md:w-[350px] md:h-[350px] w-[275px] h-[275px] pt-3 md:p-0"
         >
           {!imgLoaded && (
             <Blurhash
               hash="L27on;aK8wD5%iRPozt700t9.S.S"
-              width="350px"
-              height="350px"
+              width="100%"
+              height="100%"
               resolutionX={32}
               resolutionY={32}
               punch={2}
@@ -139,7 +139,7 @@ const Values = ({ mainImg }) => {
             loading="lazy"
             src={mainImg}
             alt=""
-            className="w-[350px] h-[350px] rounded-full outline-dashed outline-Secondary p-2"
+            className=" w-full h-full rounded-full outline-dashed outline-Secondary p-2"
           />
         </motion.div>
       </div>

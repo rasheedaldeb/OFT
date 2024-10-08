@@ -42,10 +42,10 @@ const WhoWeAre = ({ mainImg }) => {
     img.src = mainImg;
   }, [mainImg]);
   return (
-    <section className="desc overflow-hidden p-[50px_25px] lg:p-[50px_60px] flex flex-col-reverse lg:flex-row justify-between items-center">
+    <section className="desc overflow-hidden p-[50px_15px] lg:p-[50px_60px] flex flex-col-reverse lg:flex-row justify-between items-center">
       <div className=" image-section w-full lg:w-[45%]">
         <motion.div
-          className=" img lg:w-[600px] h-[400px] md:w-[550px]  lg:h-[550px]   flex items-center justify-center"
+          className=" img lg:w-[550px]  lg:h-[550px] w-[275px] h-[275px]  flex items-center justify-center"
           variants={imageVariants}
           initial="initial"
           whileInView="animate"
@@ -62,7 +62,7 @@ const WhoWeAre = ({ mainImg }) => {
               loading="lazy"
               src={mainImg}
               alt=""
-              className="rounded-[50%] w-full h-full  outline-dashed outline-primary p-5 object-cover"
+              className="rounded-[50%] w-full h-full    outline-dashed outline-primary md:p-5 p-3 object-cover"
             />
           )}
         </motion.div>
@@ -75,7 +75,7 @@ const WhoWeAre = ({ mainImg }) => {
       >
         <SectionHeading title="Who Are" title2="We?" />
         <motion.p
-          className="text-white text-xl p-7 bg-primary"
+          className="text-white text-xl md:p-7 p-4 bg-primary"
           variants={textVariants}
         >
           <span className="text-Secondary">OFT</span> is an administrative
@@ -89,7 +89,7 @@ const WhoWeAre = ({ mainImg }) => {
           and accounting analyses.
         </motion.p>
         <motion.p
-          className="text-gray-500  text-xl p-7"
+          className="text-gray-500  text-xl md:p-7 p-4"
           variants={textVariants}
         >
           Our team is dedicated to establishing companies and fostering business

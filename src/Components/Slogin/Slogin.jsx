@@ -17,7 +17,7 @@ const Slogin = () => {
   return (
     <section className="flex items-center justify-center pt-10 overflow-hidden">
       <motion.p
-        className="flex items-center text-2xl md:text-5xl lg:text-7xl text-primary font-medium gap-2"
+        className="flex items-center text-xl md:text-5xl lg:text-7xl  text-primary font-medium gap-2"
         variants={textVariants}
         initial="initial"
         whileInView="animate"

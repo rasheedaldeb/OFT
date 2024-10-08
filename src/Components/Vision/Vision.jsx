@@ -46,7 +46,7 @@ const Vision = ({ mainImg }) => {
   return (
     <section
       className=" overflow-hidden border-t-[20px] border-primary items-center
-    p-[50px_25px] lg:p-[50px_60px] mt-10 bg-Secondary flex flex-col gap-6 lg:flex-row justify-between"
+    p-[50px_15px] lg:p-[50px_60px] mt-10 bg-Secondary flex flex-col gap-6 lg:flex-row justify-between"
     >
       <motion.div
         className="vision-content flex flex-col gap-5"
@@ -68,7 +68,7 @@ const Vision = ({ mainImg }) => {
           variants={imageVariants}
           initial="initial"
           whileInView="animate"
-          className=" img lg:w-[400px] lg:h-[400px] md:w-[500px] md:h-[500px] w-[300px] h-[300px]"
+          className=" img lg:w-[400px] lg:h-[400px] md:w-[500px] md:h-[500px] w-[275px] h-[275px]"
         >
           {!imgLoaded && (
             <Blurhash
