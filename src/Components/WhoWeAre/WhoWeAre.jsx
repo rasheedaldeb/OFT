@@ -43,9 +43,10 @@ const WhoWeAre = ({ mainImg }) => {
   }, [mainImg]);
   return (
     <section className="desc overflow-hidden p-[50px_15px] lg:p-[50px_60px] flex flex-col-reverse lg:flex-row justify-between items-center">
-      <div className=" image-section w-full lg:w-[45%]">
+      <div className=" image-section w-full lg:w-[45%] flex items-center justify-center">
         <motion.div
-          className=" img lg:w-[550px]  lg:h-[550px] w-[275px] h-[275px]  flex items-center justify-center"
+          className=" 
+           img md:w-[550px]  md:h-[550px] w-[275px] h-[275px]  "
           variants={imageVariants}
           initial="initial"
           whileInView="animate"

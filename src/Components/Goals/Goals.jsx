@@ -45,7 +45,7 @@ const Goals = ({ goals, mainImg }) => {
   return (
     <div className="flex flex-col-reverse lg:flex-row items-center gap-6 justify-between p-[50px_15px] lg:p-[70px_60px] overflow-hidden">
       <motion.div
-        className="img lg:w-[550px]  lg:h-[550px] w-[275px] h-[275px] "
+        className="img md:w-[550px]  md:h-[550px] w-[275px] h-[275px] "
         variants={imageVariants}
         initial="initial"
         whileInView="animate"
