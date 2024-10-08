@@ -58,7 +58,6 @@ const Goals = ({ goals, mainImg }) => {
             resolutionX={32}
             resolutionY={32}
             punch={2}
-            className=" outline-dashed outline-primary "
           />
         )}
         {imgLoaded && (

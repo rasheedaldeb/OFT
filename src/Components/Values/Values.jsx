@@ -132,15 +132,16 @@ const Values = ({ mainImg }) => {
               resolutionX={32}
               resolutionY={32}
               punch={2}
-              className=" outline-dashed outline-Secondary "
             />
           )}
-          <img
-            loading="lazy"
-            src={mainImg}
-            alt=""
-            className=" w-full h-full rounded-full outline-dashed outline-Secondary p-2"
-          />
+          {imgLoaded && (
+            <img
+              loading="lazy"
+              src={mainImg}
+              alt=""
+              className=" w-full h-full rounded-full outline-dashed outline-Secondary p-2"
+            />
+          )}
         </motion.div>
       </div>
     </section>
