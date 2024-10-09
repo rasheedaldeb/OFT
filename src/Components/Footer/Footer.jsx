@@ -6,11 +6,11 @@ import { BounceLoader } from "react-spinners";
 import { Link } from "react-router-dom";
 const textVariants = {
   initial: {
-    y: -200,
+    x: -200,
     opacity: 0,
   },
   animate: {
-    y: 0,
+    x: 0,
     opacity: 1,
     transition: {
       duration: 1,
@@ -34,14 +34,14 @@ const imageVariants = {
 };
 const Footer = ({ footerMenu, footerMenu2 }) => {
   return (
-    <footer className="border-t-8 border-primary mt-5 p-[50px_15px] lg:p-[70px_60px] ">
+    <footer className="border-t-8 border-primary mt-5 p-[50px_15px] lg:p-[70px_60px] overflow-x-hidden">
       <div className="flex justify-between items-center pb-10 flex-col lg:flex-row">
         <div className=" flex flex-col md:flex-row  items-center gap-5 lg:border-r-2  border-primary lg:pr-5">
           <motion.ul
             variants={textVariants}
             initial="initial"
             whileInView="animate"
-            className="flex gap-5
+            className="flex gap-5 overflow-hidden
           "
           >
             {footerMenu.map((item, id) => (
@@ -59,6 +59,7 @@ const Footer = ({ footerMenu, footerMenu2 }) => {
             variants={imageVariants}
             initial="initial"
             whileInView="animate"
+            className="overflow-hidden"
           >
             <LazyLoadImage
               src="/images/OFT ENG.png"
@@ -72,7 +73,7 @@ const Footer = ({ footerMenu, footerMenu2 }) => {
             variants={textVariants}
             initial="initial"
             whileInView="animate"
-            className="flex gap-5"
+            className="flex gap-5 overflow-hidden"
           >
             {footerMenu2.map((item, id) => (
               <li key={id}>
@@ -87,7 +88,7 @@ const Footer = ({ footerMenu, footerMenu2 }) => {
           </motion.ul>
         </div>
         <motion.div
-          className="right flex flex-col gap-3 items-center lg:w-[45%] w-full lg:p-0 pt-5"
+          className="right flex flex-col gap-3 items-center lg:w-[45%] w-full lg:p-0 pt-5 overflow-hidden"
           variants={imageVariants}
           initial="initial"
           whileInView="animate"
