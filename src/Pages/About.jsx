@@ -1,11 +1,11 @@
-import AboutHero from "../Components/AboutHero/AboutHero";
 import AboutUsSection from "../Components/AboutUsSection/AboutUsSection";
+import PagesHero from "../Components/PagesHero/PagesHero";
 import Slogin from "../Components/Slogin/Slogin";
 
 const About = () => {
   return (
     <div>
-      <AboutHero
+      <PagesHero
         title="Know Everything... About Us "
         subtitle="About OFT"
         slogin="Identify what sets your financial services apart from others in the industry. Highlight any distinctive qualities, expertise, or specialized services that make you stand out."
