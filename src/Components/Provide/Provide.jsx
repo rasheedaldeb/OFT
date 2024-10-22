@@ -35,6 +35,7 @@ const Provide = ({ content }) => {
           </div>
         ))}
       </motion.div>
+      <div></div>
     </section>
   );
 };
