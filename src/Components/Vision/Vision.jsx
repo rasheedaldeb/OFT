@@ -77,12 +77,14 @@ const Vision = ({ mainImg }) => {
               height="100%"
             />
           )}
-          <img
-            loading="lazy"
-            src={mainImg}
-            alt=""
-            className=" h-full w-full rounded-full outline-dashed outline-primary p-2"
-          />
+          {imgLoaded && (
+            <img
+              loading="lazy"
+              src={mainImg}
+              alt=""
+              className=" h-full w-full rounded-full outline-dashed outline-primary p-2"
+            />
+          )}
         </motion.div>
       </div>
     </section>
