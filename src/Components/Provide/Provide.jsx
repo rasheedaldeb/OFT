@@ -1,41 +1,46 @@
 /* eslint-disable react/prop-types */
+import "./Provide.scss";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/pagination";
 import SectionHeading from "../SectionHeading";
-import { motion } from "framer-motion";
-const textVariants = {
-  initial: {
-    x: 200,
-    opacity: 0,
+import { Autoplay, Pagination } from "swiper/modules";
+const responsive = {
+  0: {
+    slidesPerView: 1,
   },
-  animate: {
-    x: 0,
-    opacity: 1,
-    transition: {
-      duration: 1,
-      staggerChildren: 0.1,
-    },
+  1024: {
+    slidesPerView: 2,
   },
 };
 const Provide = ({ content }) => {
   return (
-    <section className="flex flex-col items-center p-[30px_20px_15px] md:p-[30px_60px_40px] overflow-hidden">
-      <SectionHeading title="AUDITING " title2="In Management" />
-      <motion.div
-        className="cards grid lg:grid-cols-2 md:grid-cols-1 gap-5 pt-5"
-        variants={textVariants}
-        initial="initial"
-        whileInView="animate"
+    <section className="p-[30px_20px_15px] md:p-[30px_60px_40px] flex flex-col items-center gap-5">
+      <SectionHeading title="What We" title2="Provide" />
+      <Swiper
+        className="mySwiper"
+        breakpoints={responsive}
+        slidesPerView={2}
+        loop={true}
+        modules={[Pagination, Autoplay]}
+        pagination={{
+          clickable: true,
+        }}
+        autoplay={{
+          delay: 5000,
+          disableOnInteraction: false,
+        }}
       >
         {content.map((item, i) => (
-          <div
+          <SwiperSlide
             key={i}
-            className="card bg-Secondary p-4 rounded-md border-t-8 border-primary"
+            className="h-[300px] lg:h-auto p-5 flex flex-col items-center gap-3 rounded-md bg-Secondary border-t-8 border-primary"
           >
             <h3 className="text-white text-lg">{item.title}</h3>
-            <p className="text-primary">{item.desc}</p>
-          </div>
+            <p className="text-primary">{item.subtitle}</p>
+          </SwiperSlide>
         ))}
-      </motion.div>
-      <div></div>
+      </Swiper>
     </section>
   );
 };
