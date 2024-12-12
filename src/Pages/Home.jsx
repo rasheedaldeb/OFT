@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import Goals from "../Components/Goals/Goals";
 import HomeHero from "../Components/HomeHero/HomeHero";
 import Slogin from "../Components/Slogin/Slogin";
@@ -8,6 +9,13 @@ import WhoWeAre from "../Components/WhoWeAre/WhoWeAre";
 const Home = () => {
   return (
     <div>
+      <Helmet>
+        <title>OFT | Home</title>
+        <meta
+          name="description"
+          content="Discover expert financial advisory services that guide you towards achieving your financial goals. Our dedicated team provides personalized investment strategies, wealth management, and comprehensive financial planning to ensure your future success. Partner with us for trusted advice and exceptional service."
+        />
+      </Helmet>
       <HomeHero mainImg="/images/Icon Logo.png" />
       <WhoWeAre mainImg="/images/who.jpg" />
       <Vision mainImg="/images/vision.jpg" />

@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import AboutUsSection from "../Components/AboutUsSection/AboutUsSection";
 import PagesHero from "../Components/PagesHero/PagesHero";
 import Slogin from "../Components/Slogin/Slogin";
@@ -5,6 +6,13 @@ import Slogin from "../Components/Slogin/Slogin";
 const About = () => {
   return (
     <div>
+      <Helmet>
+        <title>OFT | About</title>
+        <meta
+          name="description"
+          content="Learn about our commitment to providing expert financial advisory services tailored to your unique needs. Discover our team's extensive experience, personalized approach, and dedication to helping you achieve your financial goals. Trust us to be your partner in financial success."
+        />
+      </Helmet>
       <PagesHero
         title="Know Everything... About Us "
         subtitle="About OFT"

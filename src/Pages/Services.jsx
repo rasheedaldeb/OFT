@@ -1,12 +1,20 @@
+import { Helmet } from "react-helmet-async";
 import HowWeWork from "../Components/HowWeWork/HowWeWork";
 import MainServices from "../Components/MainServices/MainServices";
 import Management from "../Components/Management/Management";
 import PagesHero from "../Components/PagesHero/PagesHero";
 import Provide from "../Components/Provide/Provide";
-
+import Slogin from "../Components/Slogin/Slogin";
 const Services = () => {
   return (
     <div>
+      <Helmet>
+        <title>OFT | Services</title>
+        <meta
+          name="description"
+          content="Explore our comprehensive financial advisory services designed to meet your unique needs. From wealth management and investment strategies to retirement planning and tax optimization, our expert team is dedicated to helping you achieve financial success. Trust us to provide personalized solutions and exceptional support."
+        />
+      </Helmet>
       <PagesHero
         title="Know Everything... We Provide"
         subtitle="Our Services"
@@ -76,6 +84,7 @@ const Services = () => {
         ]}
       />
       <HowWeWork />
+      <Slogin />
     </div>
   );
 };
