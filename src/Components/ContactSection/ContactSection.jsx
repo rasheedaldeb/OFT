@@ -113,7 +113,7 @@ const ContactSection = () => {
         <div className="phone flex items-center gap-2">
           <i className="fa-solid fa-phone text-primary text-[20px] lg:text-[30px]"></i>
           <Link
-            to="whatsapp://send?abid=+963 943 745 050&text=Hello%2C%20World!"
+            to="https://api.whatsapp.com/send?phone=963 943 745 050&text=Send20%a20%quote"
             className="text-gray-500 text-[20px] lg:text-[30px]"
           >
             +963 943 745 050

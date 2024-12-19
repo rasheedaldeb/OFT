@@ -63,7 +63,7 @@ const HomeHero = ({ mainImg }) => {
     img.src = mainImg;
   }, [mainImg]);
   return (
-    <div className="hero p-[50px_20px_15px] md:p-[50px_60px_40px]">
+    <div className="hero p-[120px_20px_15px] md:p-[150px_60px_40px]">
       <motion.div
         className="slidingTextContainer text-primary"
         variants={sliderVariants}

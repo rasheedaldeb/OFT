@@ -14,7 +14,7 @@ const textVariants = {
 };
 const PagesHero = ({ title, subtitle, slogin }) => {
   return (
-    <section className="overflow-hidden">
+    <section className="overflow-hidden pt-[120px]">
       <motion.div
         className=" flex flex-col items-center pt-5 gap-5 "
         variants={textVariants}
