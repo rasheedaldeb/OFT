@@ -43,7 +43,7 @@ const WhoWeAre = ({ mainImg }) => {
   }, [mainImg]);
   return (
     <section className="desc overflow-hidden p-[50px_15px] lg:p-[50px_60px] flex flex-col-reverse lg:flex-row justify-between items-center">
-      <div className=" image-section w-full lg:w-[45%] flex items-center justify-center">
+      <div className=" flex justify-between flex-col-reverse lg:flex-row items-center gap-5">
         <motion.div
           className=" 
            img md:w-[550px]  md:h-[550px] w-[275px] h-[275px]  "
@@ -67,40 +67,40 @@ const WhoWeAre = ({ mainImg }) => {
             />
           )}
         </motion.div>
+        <motion.div
+          className=" w-full lg:w-[45%] flex flex-col gap-5 pt-4"
+          variants={textVariants}
+          initial="initial"
+          whileInView="animate"
+        >
+          <SectionHeading title="Who Are" title2="We?" />
+          <motion.p
+            className="text-white text-xl  p-4 bg-primary"
+            variants={textVariants}
+          >
+            <span className="text-Secondary">OFT</span> is an administrative
+            company specializing in multiple services from consulting and
+            training to auditing and verification. Additionally,{" "}
+            <span className="text-Secondary">OFT</span> provides contributes to
+            the rehabilitation and restructuring of the administrative,
+            financial, and operational processes within establishments. Our
+            scope extends to public relations services, labor consultations, the
+            preparation of economic feasibility studies for projects, and
+            conducting financial and accounting analyses.
+          </motion.p>
+          <motion.p
+            className="text-gray-500  text-xl md:p-7 p-4"
+            variants={textVariants}
+          >
+            Our team is dedicated to establishing companies and fostering
+            business development by creating comprehensive plans and solutions.
+            <span className="text-primary">OFT</span> specializes in guiding
+            companies through the process of entering the investment market in
+            Syria, offering support from the conceptual stage to the initiation
+            of operations.
+          </motion.p>
+        </motion.div>
       </div>
-      <motion.div
-        className=" w-full lg:w-[45%] flex flex-col gap-5 pt-4"
-        variants={textVariants}
-        initial="initial"
-        whileInView="animate"
-      >
-        <SectionHeading title="Who Are" title2="We?" />
-        <motion.p
-          className="text-white text-xl md:p-7 p-4 bg-primary"
-          variants={textVariants}
-        >
-          <span className="text-Secondary">OFT</span> is an administrative
-          company specializing in multiple services from consulting and training
-          to auditing and verification. Additionally,{" "}
-          <span className="text-Secondary">OFT</span> provides contributes to
-          the rehabilitation and restructuring of the administrative, financial,
-          and operational processes within establishments. Our scope extends to
-          public relations services, labor consultations, the preparation of
-          economic feasibility studies for projects, and conducting financial
-          and accounting analyses.
-        </motion.p>
-        <motion.p
-          className="text-gray-500  text-xl md:p-7 p-4"
-          variants={textVariants}
-        >
-          Our team is dedicated to establishing companies and fostering business
-          development by creating comprehensive plans and solutions.
-          <span className="text-primary">OFT</span> specializes in guiding
-          companies through the process of entering the investment market in
-          Syria, offering support from the conceptual stage to the initiation of
-          operations.
-        </motion.p>
-      </motion.div>
     </section>
   );
 };

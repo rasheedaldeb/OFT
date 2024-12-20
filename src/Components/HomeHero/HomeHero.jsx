@@ -74,12 +74,12 @@ const HomeHero = ({ mainImg }) => {
       </motion.div>
       <div className="hero-content w-full flex justify-between  flex-col gap-5 lg:flex-row">
         <motion.div
-          className="info w-full lg:w-[45%] flex flex-col items-center"
+          className="info w-full lg:w-[60%] flex flex-col items-center"
           variants={textVariants}
           initial="initial"
           whileInView="animate"
         >
-          <div>
+          <div className="w-full">
             <motion.h4
               className="md:text-4xl text-3xl font-bold text-gray-500"
               variants={textVariants}
@@ -111,7 +111,7 @@ const HomeHero = ({ mainImg }) => {
           />
         </motion.div>
         <motion.div
-          className="img w-full lg:w-[45%] flex items-center justify-center"
+          className="img w-full lg:w-[35%] flex items-center justify-center"
           variants={imageVariants}
           initial="initial"
           whileInView="animate"

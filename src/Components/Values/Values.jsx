@@ -47,7 +47,7 @@ const Values = ({ mainImg }) => {
       <SectionHeading title="Our" title2="Values" />
       <div
         className=" p-[30px_20px_15px] md:p-[30px_60px_40px] overflow-hidden
-      values-section w-full flex flex-col lg:flex-row  justify-between items-center bg-primary"
+      values-section w-full flex flex-col xl:flex-row  justify-between items-center bg-primary"
       >
         <motion.div
           className="values flex gap-16 flex-col md:flex-row"
