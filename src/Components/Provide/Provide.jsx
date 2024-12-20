@@ -34,7 +34,8 @@ const Provide = ({ content }) => {
         {content.map((item, i) => (
           <SwiperSlide
             key={i}
-            className="h-[300px] lg:h-auto p-5 flex flex-col items-center gap-3 rounded-md bg-Secondary border-t-8 border-primary"
+            className="h-[300px] lg:h-auto p-5 flex flex-col items-center gap-3 rounded-md  border-t-8 border-primary"
+            style={{ backgroundColor: "#3C4048" }}
           >
             <h3 className="text-white text-lg">{item.title}</h3>
             <p className="text-primary">{item.subtitle}</p>
