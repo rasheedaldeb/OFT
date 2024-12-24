@@ -7,6 +7,7 @@ const Services = lazy(() => import("./Pages/Services"));
 import NavBar from "./Components/NavBar/NavBar";
 import Footer from "./Components/Footer/Footer";
 import Loading from "./Components/Loading";
+import "react-toastify/dist/ReactToastify.css";
 function App() {
   return (
     <>

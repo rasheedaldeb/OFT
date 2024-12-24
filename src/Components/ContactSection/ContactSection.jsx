@@ -1,5 +1,7 @@
 import { motion } from "framer-motion";
+import { useState } from "react";
 import { Link } from "react-router-dom";
+import { toast, ToastContainer } from "react-toastify";
 const textVariants = {
   initial: {
     x: -200,
@@ -29,6 +31,55 @@ const textVariants2 = {
   },
 };
 const ContactSection = () => {
+  const [result, setResult] = useState("");
+  const onSubmit = async (event) => {
+    event.preventDefault();
+    toast("Sending...", {
+      style: {
+        background: "#3C4048",
+        color: "#1ABA9",
+      },
+    });
+    const formData = new FormData(event.target);
+
+    formData.append("access_key", "fe09a96c-130c-48d4-ac2d-2c7d4bc36361");
+
+    const response = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      body: formData,
+    });
+
+    const data = await response.json();
+
+    if (data.success) {
+      setResult(data.message);
+      toast.success(result, {
+        position: "top-right",
+        autoClose: 3000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+      });
+
+      event.target.reset();
+    } else {
+      console.log("Error", data);
+      setResult(data.message);
+      toast.error(result, {
+        position: "top-right",
+        autoClose: 3000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+      });
+    }
+  };
   return (
     <section className="p-[50px_15px] lg:p-[70px_60px] flex lg:flex-row flex-col gap-5 justify-between overflow-hidden">
       <motion.div
@@ -40,7 +91,7 @@ const ContactSection = () => {
         <h2 className="text-[25px] lg:text-[40px] font-bold text-primary">
           Send Us a Message
         </h2>
-        <form className="flex flex-col gap-5">
+        <form className="flex flex-col gap-5" onSubmit={onSubmit}>
           <div className="name flex flex-col gap-2">
             <label htmlFor="name" className="text-gray-500 text-[20px]">
               Name
@@ -48,7 +99,9 @@ const ContactSection = () => {
             <input
               type="text"
               id="name"
+              name="name"
               placeholder="name"
+              required
               className="h-[50px] rounded-lg pl-3 outline-none border border-primary text-white"
               style={{
                 background: "none",
@@ -62,7 +115,9 @@ const ContactSection = () => {
             <input
               type="email"
               id="email"
+              name="email"
               placeholder="email"
+              required
               className="h-[50px] rounded-lg pl-3 outline-none border border-primary text-white"
               style={{
                 background: "none",
@@ -76,6 +131,7 @@ const ContactSection = () => {
             <textarea
               id="message"
               placeholder="message"
+              required
               className="h-[150px] rounded-lg pl-3 pt-3 outline-none border border-primary text-white"
               style={{
                 background: "none",
@@ -130,6 +186,7 @@ const ContactSection = () => {
           needs. Let's make great things happen together!
         </p>
       </motion.div>
+      <ToastContainer />
     </section>
   );
 };

@@ -80,7 +80,6 @@ const NavBar = ({ menu }) => {
                 <Link
                   className="text-[20px] font-medium text-primary"
                   to={item.path}
-                  target="blank"
                 >
                   {item.link}
                 </Link>
