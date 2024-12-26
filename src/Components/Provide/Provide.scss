@@ -5,13 +5,12 @@
 .swiper-wrapper {
   height: 250px !important;
   display: flex;
-  gap: 20px;
+  gap: 3px;
 }
 .swiper-slide {
   text-align: center;
   font-size: 18px;
   background: #fff;
-
   /* Center slide text vertically */
   display: flex;
   justify-content: center;

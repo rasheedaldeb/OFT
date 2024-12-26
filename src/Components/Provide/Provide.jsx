@@ -20,14 +20,14 @@ const Provide = ({ content }) => {
       <Swiper
         className="mySwiper"
         breakpoints={responsive}
-        slidesPerView={2}
+        slidesPerView={5}
         loop={true}
         modules={[Pagination, Autoplay]}
         pagination={{
           clickable: true,
         }}
         autoplay={{
-          delay: 5000,
+          delay: 6000,
           disableOnInteraction: false,
         }}
       >
