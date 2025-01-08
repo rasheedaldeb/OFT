@@ -1,6 +1,6 @@
 {
   "name": "oft-project",
-  "homepage": "https://rasheedaldeb.github.io/OFT/",
+  // "homepage": "https://rasheedaldeb.github.io/OFT/",
   "private": true,
   "version": "0.0.0",
   "type": "module",
